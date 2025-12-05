@@ -1,0 +1,42 @@
+# The Privacy Dilemma
+
+import { Callout, Steps } from 'nextra/components'
+
+**Why is private metadata on a public chain so hard?** 
+
+It seems like a paradox. Public blockchains are designed to be transparent. Everyone can see everything. Thrifty NFT solves this "impossible" dilemma by implementing a **Triple-Layer Encryption Protocol**.
+
+## 🛡️ The 3-Checkpoint Solution
+
+We encrypt data at three distinct stages to ensure that "Public Ledger" does not mean "Public Access."
+
+### 1. Contract Level Encryption
+The `tokenURI` function—standard in all NFTs—is modified.
+*   **The Mask:** The actual URI is not readable by standard marketplace bots or explorers.
+*   **Access Control:** Only the verified owner's wallet can trigger the smart contract to reveal the location of the encrypted vault.
+*   **Fallback:** Even if one were to find the URI manually, the destination is useless without the key.
+
+### 2. Dapp Level Decryption
+Our marketplace is not just a UI; it is a **Decentralized Gatekeeper**.
+<Callout type="info" emoji="🔑">
+    **No Middleman:** The dapp uses your wallet signature to fetch the decryption keys from the decentralized network. We never see your keys.
+</Callout>
+
+### 3. IPFS Level Security
+The final line of defense.
+*   **Encrypted Storage:** The content (e.g., the PDF or MP3) is encrypted *before* it is uploaded to IPFS.
+*   **Redundancy:** Even if our dapp goes offline, the content lives on IPFS forever. You can use our open-source recovery tool to decrypt your assets manually using your wallet.
+
+---
+
+## 📝 Summary
+
+| Level | Status | Resilience |
+| :--- | :--- | :--- |
+| **Contract** | 🟢 Fully Decentralized | Immutable smart contract logic. |
+| **Dapp** | 🟢 Decentralized API | Trustless API for key retrieval. |
+| **IPFS** | 🟢 Encrypted & Distributed | Censorship-resistant storage. |
+
+<Callout type="error" emoji="🛑">
+  **The Result:** Even if the Thrifty website is seized, hacked, or deleted, **you still own your data**, and only **you** can read it.
+</Callout>

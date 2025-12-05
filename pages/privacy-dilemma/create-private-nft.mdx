@@ -1,0 +1,39 @@
+# How to Create Private NFTs
+
+import { Steps, Callout } from 'nextra/components'
+
+Creating a Censorship-Resistant Private NFT is simple. Follow this guide to mint your first asset.
+
+<Callout type="info">
+  **Prerequisite:** Ensure you hold enough **$THRIFTY** tokens to cover the minting gas and service fee.
+</Callout>
+
+<Steps>
+### Connect & Verify
+Connect your wallet to the Thrifty Dapp. You must sign a signature request to verify ownership of your address.
+
+### Prepare Your Assets
+Select the file you wish to encrypt.
+*   **Supported Formats:** JPG, PNG, MP3, MP4, PDF, ZIP, TXT.
+*   **Limit:** Files up to 100MB (for standard minting).
+
+### Set Metadata
+You will define two sets of data:
+1.  **Public Preview:** Upload a cover image and description (visible to everyone on OpenSea/Thrifty).
+2.  **Private Payload:** Upload the actual file. *This step triggers the local encryption process in your browser.*
+
+### Agree & Mint
+Review the <a href="/terms">Terms of Service</a>. Confim that you have legal rights to the content.
+*   Click **Mint**.
+*   The system will upload the encrypted payload to IPFS and write the smart contract transaction.
+
+### Distribution
+Once minted, the NFT is yours. You can:
+*   **List it for sale:** Set a price in ETH or $THRIFTY.
+*   **Hold it:** Enjoy your private encrypted storage.
+*   **Gift it:** Transfer it to a friend's wallet.
+</Steps>
+
+<Callout type="warning" emoji="⚠️">
+  **Important:** Once you sell or transfer the NFT, you transfer the **Right to Decrypt**. You will lose access to the private file, and the new owner will gain it.
+</Callout>
