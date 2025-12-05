@@ -7,7 +7,12 @@ const config: DocsThemeConfig = {
       titleTemplate: '%s – Thrifty SoFI'
     }
   },
-  logo: <span>Thrifty SoFI</span>,
+  logo: (
+    <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+      <img src="/logo.svg" alt="Thrifty SoFI" width={80} height={80} />
+      <span style={{ fontWeight: 800, fontSize: '2.4rem' }}>Thrifty SoFI</span>
+    </div>
+  ),
   feedback: {
     content: null,
   },
@@ -22,6 +27,7 @@ const config: DocsThemeConfig = {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta property="og:title" content="Thrifty SoFI Documentation" />
       <meta property="og:description" content="Official documentation for Thrifty SoFI" />
+      <link rel="icon" href="/logo.svg" type="image/svg+xml" />
     </>
   ),
 }
