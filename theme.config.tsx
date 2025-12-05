@@ -8,9 +8,9 @@ const config: DocsThemeConfig = {
     }
   },
   logo: (
-    <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-      <img src="/logo.svg" alt="Thrifty SoFI" width={80} height={80} />
-      <span style={{ fontWeight: 800, fontSize: '2.4rem' }}>Thrifty SoFI</span>
+    <div className="logo-container">
+      <img src="/logo.svg" alt="Thrifty SoFI" className="logo-image" />
+      <span className="logo-text">Thrifty SoFI</span>
     </div>
   ),
   feedback: {
