@@ -20,7 +20,11 @@ const config: DocsThemeConfig = {
     component: null,
   },
   footer: {
-    text: '© 2025 Thrifty SoFI. All rights reserved.',
+    text: (
+      <span>
+        © {new Date().getFullYear()} Thrifty SoFI. All rights reserved.
+      </span>
+    ),
   },
   head: (
     <>
